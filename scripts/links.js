@@ -1,3 +1,4 @@
+// ----- Dark Mode Functionality -----
 document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("darkmode-button");
     const body = document.body;
@@ -24,4 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
         updateButton();
         
     });
+});
+
+// ----- Share Modal Functionality -----
+const shareButton = document.getElementById("share-button");
+const blur = document.querySelector(".blur");
+
+shareButton.addEventListener("click", () => {
+    blur.classList.add("active"); // Einblenden
+});
+
+// Optional: Klick auf das Overlay schließt es wieder
+blur.addEventListener("click", () => {
+    blur.classList.remove("active"); // Ausblenden
 });
