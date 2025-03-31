@@ -1,5 +1,5 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: "Poppins", sans-serif; background: #ddd; }
+body { font-family: "Poppins", sans-serif; background: #227093; color: #222; transition: 0.2s;}
 
 .header-wrapper {
     display: flex;
@@ -19,8 +19,11 @@ body { font-family: "Poppins", sans-serif; background: #ddd; }
 .darkmode-button {
     width: 40px;
     height: 40px;
+    padding-top: 2px;
+    padding-right: 2px;
     border-radius: 50%;
     background: #fff;
+    color: #222;
     display: flex; 
     justify-content: center; 
     align-items: center;
@@ -28,6 +31,12 @@ body { font-family: "Poppins", sans-serif; background: #ddd; }
     cursor: pointer;
     border: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.darkmode-button:hover {
+    background: #c9783a;
+    color: #fff;
 }
 
 .darkmode-button span {
@@ -39,6 +48,7 @@ body { font-family: "Poppins", sans-serif; background: #ddd; }
     height: 40px;
     border-radius: 50%;
     background: #fff;
+    color: #222;
     display: flex; 
     justify-content: center; 
     align-items: center;
@@ -46,6 +56,12 @@ body { font-family: "Poppins", sans-serif; background: #ddd; }
     cursor: pointer;
     border: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.menu-button:hover {
+    background: #c9783a;
+    color: #fff;
 }
 
 .menu-button span {
@@ -103,9 +119,50 @@ body { font-family: "Poppins", sans-serif; background: #ddd; }
     padding: 20px;
     margin: 12px 0;
     background: #fff;
-    color: #000;
+    color: #222;
     border-radius: 36px;
     text-decoration: none;
+    transition: 0.2s;
+}
+
+.link-button:hover {
+    background: #c9783a;
+    color: #fff;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #1a1a1a;  /* Dark background */
+    color: #f1f1f1;       /* Light text */
+}
+
+.dark-mode .darkmode-button {
+    background: #444;
+    color: #fff;
+    padding-right: 0px;
+}
+
+.dark-mode .darkmode-button:hover {
+    background: #c9783a;
+}
+
+.dark-mode .menu-button {
+    background: #444;
+    color: #fff;
+}
+
+.dark-mode .menu-button:hover {
+    background: #c9783a;
+}
+
+.dark-mode .link-button {
+    background: #444;
+    color: #fff;
+}
+
+.dark-mode .link-button:hover {
+    background: #c9783a;
+    color: #fff;
 }
 
 @media (max-width: 575px) {
