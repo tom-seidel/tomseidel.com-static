@@ -168,7 +168,12 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
 }
 
 .dark-mode .overlay {
-    background: rgba(126, 126, 126, 0.4);
+    background: rgba(126, 126, 126, 0.5);
+}
+
+.dark-mode .modal {
+    background-color: #333;
+    color: #f1f1f1;
 }
 
 /* Modal Window */
@@ -176,7 +181,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(26, 26, 26, 0.4);
+    background: rgba(26, 26, 26, 0.5);
     opacity: 0;
     pointer-events: none;
     z-index: 1000;
@@ -184,6 +189,30 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
 }
 
 .overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 560px;
+    max-width: 560px;
+    height: 560px;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1001;
+}
+
+.modal.active {
     opacity: 1;
     pointer-events: auto;
 }

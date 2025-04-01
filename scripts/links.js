@@ -30,12 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
 // ----- Share Modal Functionality -----
 const shareButton = document.getElementById("share-button");
 const overlay = document.querySelector(".overlay");
+const modal = document.querySelector(".modal");
 
 shareButton.addEventListener("click", () => {
-    overlay.classList.add("active"); // Einblenden
+    overlay.classList.add("active"); // Show
+    modal.classList.add("active");
 });
 
-// Optional: Klick auf das Overlay schließt es wieder
+// Optional: Click on the overlay to close it again
 overlay.addEventListener("click", () => {
-    overlay.classList.remove("active"); // Ausblenden
+    overlay.classList.remove("active"); // Hide
+    modal.classList.remove("active");
 });
