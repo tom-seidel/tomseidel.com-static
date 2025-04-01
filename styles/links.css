@@ -167,22 +167,25 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     color: #fff;
 }
 
+.dark-mode .overlay {
+    background: rgba(126, 126, 126, 0.4);
+}
+
 /* Modal Window */
-.blur {
-    visibility: hidden;
-    opacity: 0;
+.overlay {
     position: fixed;
     width: 100%;
     height: 100%;
     background: rgba(26, 26, 26, 0.4);
+    opacity: 0;
+    pointer-events: none;
     z-index: 1000;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Wenn aktiv: Sichtbar mit Opacity */
-.blur.active {
-    visibility: visible;
+.overlay.active {
     opacity: 1;
+    pointer-events: auto;
 }
 
 @media (max-width: 575px) {

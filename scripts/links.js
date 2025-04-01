@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ----- Share Modal Functionality -----
 const shareButton = document.getElementById("share-button");
-const blur = document.querySelector(".blur");
+const overlay = document.querySelector(".overlay");
 
 shareButton.addEventListener("click", () => {
-    blur.classList.add("active"); // Einblenden
+    overlay.classList.add("active"); // Einblenden
 });
 
 // Optional: Klick auf das Overlay schließt es wieder
-blur.addEventListener("click", () => {
-    blur.classList.remove("active"); // Ausblenden
+overlay.addEventListener("click", () => {
+    overlay.classList.remove("active"); // Ausblenden
 });
