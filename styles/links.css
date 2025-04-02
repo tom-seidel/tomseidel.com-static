@@ -9,7 +9,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     margin: 0 1.5em;
 }
 
-.share-content {
+.darkmode-share {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -19,8 +19,6 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
 .darkmode-button {
     width: 40px;
     height: 40px;
-    padding-top: 2px;
-    padding-right: 2px;
     border-radius: 50%;
     background: #fff;
     color: #222;
@@ -39,10 +37,12 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     color: #fff;
 }
 
+/*
 .darkmode-button span {
     display: inline-block;
     transition: 0s;
 }
+*/
 
 .share-button {
     width: 40px;
@@ -65,10 +65,12 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     color: #fff;
 }
 
+/*
 .share-button span {
     display: inline-block;
     transform: translateY(-20%);
 }
+*/
 
 .hero-content {
     display: flex;
@@ -140,8 +142,6 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
 .dark-mode .darkmode-button {
     background: #444;
     color: #fff;
-    padding-right: 0px;
-    padding-bottom: 2px;
 }
 
 .dark-mode .darkmode-button:hover {
