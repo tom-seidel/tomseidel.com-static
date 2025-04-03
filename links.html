@@ -10,10 +10,18 @@
         <title>Tom Seidel | Links</title>
     </head>
     <body>
-        <div id="modal" class="modal">
-            <h2>@tomseidel</h2>
-        </div>
         <div class="overlay"></div>
+
+        <section id="modal-frame" class="modal-frame">
+            <header class="modal-header">
+                <h2>Share link</h2>
+                <button id="modal-close" class="modal-close" aria-label="Close modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+            </header>
+            <div class="modal-input-wrapper">
+                <input type="text" id="modal-link" class="modal-link" value="https://tomseidel.com/links" readonly>
+                <button id="copy-button" class="copy-button">Copy Link</button>
+            </div>
+        </section>
 
         <header>
             <div class="header-wrapper">

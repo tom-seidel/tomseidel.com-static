@@ -9,6 +9,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     margin: 0 1.5em;
 }
 
+/* Container for darkmode and share button */
 .darkmode-share {
     display: flex;
     justify-content: space-between;
@@ -37,13 +38,6 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     color: #fff;
 }
 
-/*
-.darkmode-button span {
-    display: inline-block;
-    transition: 0s;
-}
-*/
-
 .share-button {
     width: 40px;
     height: 40px;
@@ -64,13 +58,6 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     background: #c9783a;
     color: #fff;
 }
-
-/*
-.share-button span {
-    display: inline-block;
-    transform: translateY(-20%);
-}
-*/
 
 .hero-content {
     display: flex;
@@ -123,7 +110,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     margin: 12px 0;
     background: #fff;
     color: #222;
-    border-radius: 36px;
+    border-radius: 12px;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -171,8 +158,12 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     background: rgba(126, 126, 126, 0.5);
 }
 
-.dark-mode .modal {
+.dark-mode .modal-frame {
     background-color: #333;
+    color: #f1f1f1;
+}
+
+.dark-mode .modal-close {
     color: #f1f1f1;
 }
 
@@ -193,14 +184,14 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     pointer-events: auto;
 }
 
-.modal {
+
+.modal-frame {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 560px;
-    max-width: 560px;
-    height: 560px;
+    width: 100%;
+    max-width: calc(610px - 3em);
     padding: 20px;
     background-color: #fff;
     color: #222;
@@ -212,9 +203,84 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     z-index: 1001;
 }
 
-.modal.active {
+.modal-frame.active {
     opacity: 1;
     pointer-events: auto;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.modal-header h2 {
+    text-align: center;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.modal-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.modal-link {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f8f8f8;
+    margin: 16px auto;
+}
+
+.modal-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 20px;
+
+}
+
+.copy-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background: #c9783a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.copy-button:hover {
+    background: #a6612d;
 }
 
 @media (max-width: 575px) {

@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ----- Share Modal Functionality -----
 const shareButton = document.getElementById("share-button");
 const overlay = document.querySelector(".overlay");
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal-frame");
 
 shareButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-icon lucide-ellipsis"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>`
 
@@ -42,5 +42,25 @@ shareButton.addEventListener("click", () => {
 // Option: Click on the overlay to close it again
 overlay.addEventListener("click", () => {
     overlay.classList.remove("active"); // Hide
+    modal.classList.remove("active");
+});
+
+// ----- Clipboard Functionality -----
+document.getElementById("copy-button").addEventListener("click", () => {
+    const input = document.getElementById("modal-link");
+    input.select();
+    document.execCommand("copy");
+
+    // Optional: Briefly change the button text as feedback
+    const button = document.getElementById("copy-button");
+    button.textContent = "Copied";
+    setTimeout(() => (button.textContent = "Copy Link"), 2000);
+});
+
+// ----- Close Modal Window -----
+const closeButton = document.getElementById("modal-close");
+
+closeButton.addEventListener("click", () => {
+    overlay.classList.remove("active");
     modal.classList.remove("active");
 });
