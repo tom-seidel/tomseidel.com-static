@@ -67,6 +67,10 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     align-items: center;
 }
 
+.modal-close svg {
+    stroke: black !important;
+}
+
 .modal-input-wrapper {
     display: flex;
     flex-direction: column;
@@ -164,7 +168,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     color: #fff;
 }
 
-.share-button {
+.menu-button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -180,7 +184,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     transition: background 0.3s;
 }
 
-.share-button:hover {
+.menu-button:hover {
     background: #c9783a;
     color: #fff;
 }
@@ -262,12 +266,12 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     background: #c9783a;
 }
 
-.dark-mode .share-button {
+.dark-mode .menu-button {
     background: #444;
     color: #fff;
 }
 
-.dark-mode .share-button:hover {
+.dark-mode .menu-button:hover {
     background: #c9783a;
 }
 
@@ -292,6 +296,10 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
 
 .dark-mode .modal-close {
     color: #f1f1f1;
+}
+
+.dark-mode .modal-close svg {
+    stroke: white !important;
 }
 
 @media (max-width: 575px) {
