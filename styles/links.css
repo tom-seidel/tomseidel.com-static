@@ -1,172 +1,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; transition: 0.3s; }
 
-.header-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 40px;
-    margin: 0 1.5em;
-}
-
-/* Container for darkmode and share button */
-.darkmode-share {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 560px;
-}
-
-.darkmode-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #fff;
-    color: #222;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    font-size: 24px; 
-    cursor: pointer;
-    border: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s;
-}
-
-.darkmode-button:hover {
-    background: #c9783a;
-    color: #fff;
-}
-
-.share-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #fff;
-    color: #222;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    font-size: 24px; 
-    cursor: pointer;
-    border: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s;
-}
-
-.share-button:hover {
-    background: #c9783a;
-    color: #fff;
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 560px;
-    padding-top: 30px;
-    text-align: center;
-}
-
-.hero-content h1 {
-    margin-top: 10px;
-    font-size: 20px;
-}
-.hero-content p {
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-.hero-pic {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.link-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.link-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 0 1.5em;
-}
-
-.link-button {
-    display: block;
-    width: 100%;
-    max-width: 560px;
-    text-align: center;
-    padding: 20px;
-    margin: 12px 0;
-    background: #fff;
-    color: #222;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.link-button:hover {
-    background: #c9783a;
-    color: #fff;
-}
-
-/* Dark Mode */
-.dark-mode {
-    background: #1a1a1a;  /* Dark background */
-    color: #f1f1f1;       /* Light text */
-}
-
-.dark-mode .darkmode-button {
-    background: #444;
-    color: #fff;
-}
-
-.dark-mode .darkmode-button:hover {
-    background: #c9783a;
-}
-
-.dark-mode .share-button {
-    background: #444;
-    color: #fff;
-}
-
-.dark-mode .share-button:hover {
-    background: #c9783a;
-}
-
-.dark-mode .link-button {
-    background: #444;
-    color: #fff;
-}
-
-.dark-mode .link-button:hover {
-    background: #c9783a;
-    color: #fff;
-}
-
-.dark-mode .overlay {
-    background: rgba(126, 126, 126, 0.5);
-}
-
-.dark-mode .modal-frame {
-    background-color: #333;
-    color: #f1f1f1;
-}
-
-.dark-mode .modal-close {
-    color: #f1f1f1;
-}
-
 /* Modal Window */
 .overlay {
     position: fixed;
@@ -175,7 +9,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     background: rgba(26, 26, 26, 0.5);
     opacity: 0;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 1001;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -183,7 +17,6 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     opacity: 1;
     pointer-events: auto;
 }
-
 
 .modal-frame {
     position: fixed;
@@ -200,7 +33,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
-    z-index: 1001;
+    z-index: 1002;
 }
 
 .modal-frame.active {
@@ -263,7 +96,6 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     justify-content: center;
     width: 300px;
     height: 20px;
-
 }
 
 .copy-button {
@@ -283,8 +115,201 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     background: #a6612d;
 }
 
+/* Header section with darkmode and share button */
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+.header-content {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.darkmode-share {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 1.5em;
+}
+
+.darkmode-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    color: #222;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 24px; 
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.darkmode-button:hover {
+    background: #c9783a;
+    color: #fff;
+}
+
+.share-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    color: #222;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 24px; 
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.share-button:hover {
+    background: #c9783a;
+    color: #fff;
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 560px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.hero-wrapper h1 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+.hero-wrapper p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.hero-pic {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Link section */
+.link-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.link-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 1.5em;
+}
+
+.link-button {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    padding: 20px;
+    margin: 12px 0;
+    background: #fff;
+    color: #222;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link-button:hover {
+    background: #c9783a;
+    color: #fff;
+}
+
+/* Dark mode functionality */
+.dark-mode {
+    background: #1a1a1a;
+    color: #f1f1f1;
+}
+
+.dark-mode .darkmode-button {
+    background: #444;
+    color: #fff;
+}
+
+.dark-mode .darkmode-button:hover {
+    background: #c9783a;
+}
+
+.dark-mode .share-button {
+    background: #444;
+    color: #fff;
+}
+
+.dark-mode .share-button:hover {
+    background: #c9783a;
+}
+
+.dark-mode .link-button {
+    background: #444;
+    color: #fff;
+}
+
+.dark-mode .link-button:hover {
+    background: #c9783a;
+    color: #fff;
+}
+
+.dark-mode .overlay {
+    background: rgba(126, 126, 126, 0.5);
+}
+
+.dark-mode .modal-frame {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+.dark-mode .modal-close {
+    color: #f1f1f1;
+}
+
 @media (max-width: 575px) {
-    .header-wrapper {
+    /* Dark mode and share button are closer to the top */
+    .header-content{
+        top: 15px;
+    }
+
+    /* Modal window snaps to bottom */
+    .modal-frame {
+        top: auto;
+        bottom: 0;
+        left: 50%;
         padding-top: 15px;
+        padding-bottom: 40px;
+        transform: translateX(-50%);
+        border-radius: 12px 12px 0 0;
+        max-height: 90vh;
+        overflow-y: auto;
     }
 }
