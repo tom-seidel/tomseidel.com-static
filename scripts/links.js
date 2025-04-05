@@ -27,6 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// ----- Dark Mode and Menu Button show and hide while scrolling -----
+const darkmodeShare = document.querySelector(".darkmode-share");
+let lastScroll = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 60) {
+        darkmodeShare.classList.add("hidden");
+    } else {
+        darkmodeShare.classList.remove("hidden")
+    }
+});
+
+
 // ----- Menu Modal Functionality -----
 const menuButton = document.getElementById("menu-button");
 const overlay = document.querySelector(".overlay");

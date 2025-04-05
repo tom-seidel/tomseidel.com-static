@@ -107,6 +107,8 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     max-width: 300px;
     padding: 10px;
     background: #c9783a;
+    font-size: 12px;
+    font-weight: 700;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -145,6 +147,12 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     width: 100%;
     max-width: 560px;
     margin: 0 1.5em;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.darkmode-share.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .darkmode-button {
@@ -222,6 +230,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .link-content {
