@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// ----- Dark Mode and Menu Button show and hide while scrolling -----
+// ----- Dark Mode Button and Menu Button show and hide while scrolling -----
 const darkmodeShare = document.querySelector(".darkmode-share");
 let lastScroll = window.scrollY;
 
 window.addEventListener("scroll", () => {
-    if(window.scrollY > 60) {
+    if(window.scrollY > 220) {
         darkmodeShare.classList.add("hidden");
     } else {
         darkmodeShare.classList.remove("hidden")
