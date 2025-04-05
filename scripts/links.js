@@ -58,10 +58,18 @@ overlay.addEventListener("click", () => {
     modal.classList.remove("active");
 });
 
+// ----- Close Modal Window -----
+const closeButton = document.getElementById("modal-close");
+
+closeButton.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    modal.classList.remove("active");
+});
+
 // ----- Clipboard Functionality -----
 document.getElementById("copy-button").addEventListener("click", () => {
     const input = document.getElementById("modal-link");
-    input.select();
+    input.value = "https://tomseidel.com/links";
     document.execCommand("copy");
 
     // Optional: Briefly change the button text as feedback
@@ -70,10 +78,24 @@ document.getElementById("copy-button").addEventListener("click", () => {
     setTimeout(() => (button.textContent = "Copy Link"), 2000);
 });
 
-// ----- Close Modal Window -----
-const closeButton = document.getElementById("modal-close");
+// ----- Clipboard Functionality for Link Buttons -----
+document.querySelectorAll(".link-right").forEach(button => {
+    button.addEventListener("click", () => {
+        const url = button.dataset.url;
+        const input = document.getElementById("modal-link");
+        input.value = url;
 
-closeButton.addEventListener("click", () => {
-    overlay.classList.remove("active");
-    modal.classList.remove("active");
+        // Copy instantly
+        input.select();
+        document.execCommand("copy");
+
+        // Feedback
+        const copyBtn = document.getElementById("copy-button");
+        copyBtn.textContent = "Copied";
+        setTimeout(() => (copyBtn.textContent = "Copy Link"), 2000);
+
+        // Show modal
+        document.querySelector(".overlay").classList.add("active");
+        document.querySelector(".modal-frame").classList.add("active");
+    });
 });
