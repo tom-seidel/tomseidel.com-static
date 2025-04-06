@@ -252,7 +252,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     padding: 18px;
     position: relative;
     transition: 0.3s;
-  }
+}
 
   .link-button:hover {
     background: #c9783a;
