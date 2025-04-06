@@ -229,6 +229,7 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
 .link-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .link-content {
