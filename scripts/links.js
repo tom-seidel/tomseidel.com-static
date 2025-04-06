@@ -26,7 +26,7 @@ const darkmodeShare = document.querySelector(".darkmode-share");
 let lastScroll = window.scrollY;
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 220) {
+    if (window.scrollY > 200) {
         darkmodeShare.classList.add("hidden");
     } else {
         darkmodeShare.classList.remove("hidden");
@@ -43,7 +43,7 @@ menuButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" heigh
 
 menuButton.addEventListener("click", () => {
     const url = menuButton.dataset.url || window.location.href;
-    openShareModal(url); // Link nur einfügen & Modal anzeigen
+    openShareModal(url); // Insert link only & display modal
 });
 
 overlay.addEventListener("click", () => {
@@ -60,17 +60,17 @@ closeButton.addEventListener("click", () => {
 const modalLinkInput = document.getElementById("modal-link");
 const copyButton = document.getElementById("copy-button");
 
-// Öffnet das Modal & setzt den Link, aber kopiert NICHT direkt
+// Opens the modal & sets the link, but DO NOT copy directly
 function openShareModal(link) {
     modalLinkInput.value = link;
-    modalLinkInput.select(); // optional: direkt markieren
+    modalLinkInput.select(); // optional: mark directly
     copyButton.textContent = "Copy Link";
 
     overlay.classList.add("active");
     modal.classList.add("active");
 }
 
-// Erst wenn der User wirklich klickt, wird kopiert
+// Only when the user actually clicks it is copied
 copyButton.addEventListener("click", () => {
     modalLinkInput.select();
     document.execCommand("copy");
@@ -79,10 +79,13 @@ copyButton.addEventListener("click", () => {
     setTimeout(() => (copyButton.textContent = "Copy Link"), 2000);
 });
 
-// Rechts-Klick-Menüs in den Link-Buttons
+// Right-click menus in the link buttons
 document.querySelectorAll(".link-right").forEach(button => {
     button.addEventListener("click", () => {
         const url = button.dataset.url;
-        openShareModal(url); // Link setzen, Modal zeigen, NICHT kopieren
+        openShareModal(url); // Set link, show modal, DO NOT copy
     });
 });
+
+// ----- Footer Section -----
+document.getElementById("year").textContent = new Date().getFullYear(); // get year

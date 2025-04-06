@@ -229,8 +229,6 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
 .link-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .link-content {
@@ -297,6 +295,19 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     object-fit: contain;
 }
 
+footer {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #bcbcbc;
+}
+  
+footer a {
+    color: inherit;
+    text-decoration: underline;
+}
+
 /* Dark mode functionality */
 .dark-mode {
     background: #1a1a1a;
@@ -358,6 +369,10 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
 
 .dark-mode .link-right {
     color: #f1f1f1;
+}
+
+.dark-mode footer {
+    color: #404040;
 }
 
 @media (max-width: 575px) {
