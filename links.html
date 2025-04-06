@@ -14,23 +14,30 @@
         <title>Tom Seidel | Links</title>
     </head>
     <body>
+
+
         <div class="overlay"></div>
         <section id="modal-frame" class="modal-frame">
-            <header class="modal-header">
-                <h2>Share Link</h2>
-                <button id="modal-close" class="modal-close" aria-label="Close modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
-            </header>
-            <div class="modal-input-wrapper">
-                <input type="text" id="modal-link" class="modal-link" value="https://tomseidel.com/links" readonly>
-                <button id="copy-button" class="copy-button">Copy Link</button>
-            </div>
+          <header class="modal-header">
+            <h2>Share Link</h2>
+            <button id="modal-close" class="modal-close" aria-label="Close modal">
+              <!-- Close Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+          </header>
+          <div class="modal-input-wrapper">
+            <input type="text" id="modal-link" class="modal-link" value="" readonly />
+            <button id="copy-button" class="copy-button" data-url="">Copy Link</button>
+          </div>
         </section>
+
+        
         <header>
             <div class="header-wrapper">
                 <div class="header-content">
                     <div class="darkmode-share">
                         <button id="darkmode-button" class="darkmode-button"></button>
-                        <button id="menu-button" class="menu-button"></button>
+                        <button id="menu-button" class="menu-button" data-url="https://tomseidel.com/links"></button>
                     </div>
                 </div>
                 <div class="hero-wrapper">
@@ -53,8 +60,9 @@
                     </div>
                     <a href="https://bsky.app/profile/tomseidel.com" class="link-center" target="_blank">Bluesky</a>
                     <button class="link-right" data-url="https://bsky.app/profile/tomseidel.com" aria-label="Copy Bluesky Link">
-                    <!-- 3 dots icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                        <!-- 3 dots icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                    </button>
                 </div>
             
                 <!-- Instagram -->
@@ -65,8 +73,9 @@
                     </div>
                     <a href="https://www.instagram.com/tom_sei/" class="link-center" target="_blank">Instagram</a>
                     <button class="link-right" data-url="https://www.instagram.com/tom_sei/" aria-label="Copy Instagram Link">
-                    <!-- 3 dots icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                        <!-- 3 dots icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                    </button>
                 </div>
 
                 <!-- Threads -->
@@ -77,8 +86,9 @@
                     </div>
                     <a href="https://www.threads.net/@tom_sei/" class="link-center" target="_blank">Threads</a>
                     <button class="link-right" data-url="https://www.threads.net/@tom_sei/" aria-label="Copy Threads Link">
-                    <!-- 3 dots icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                        <!-- 3 dots icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                    </button>
                 </div>
                 
                 <!-- Twitter -->
@@ -89,8 +99,9 @@
                     </div>
                     <a href="https://x.com/tseideldev/" class="link-center" target="_blank">Twitter</a>
                     <button class="link-right" data-url="https://x.com/tseideldev/" aria-label="Copy Twitter Link">
-                    <!-- 3 dots icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                        <!-- 3 dots icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                    </button>
                 </div>
 
                 <!-- TikTok -->
@@ -101,8 +112,9 @@
                     </div>
                     <a href="https://www.tiktok.com/@tom_seidel" class="link-center" target="_blank">TikTok</a>
                     <button class="link-right" data-url="https://www.tiktok.com/@tom_seidel" aria-label="Copy TikTok Link">
-                    <!-- 3 dots icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                        <!-- 3 dots icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                    </button>
                 </div>
 
                 <!-- Snapchat -->
@@ -113,8 +125,9 @@
                     </div>
                     <a href="https://www.snapchat.com/add/tom_sei" class="link-center" target="_blank">Snapchat</a>
                     <button class="link-right" data-url="https://www.snapchat.com/add/tom_sei" aria-label="Copy Snapchat Link">
-                    <!-- 3 dots icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                        <!-- 3 dots icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                    </button>
                 </div>
 
                 <!-- Facebook -->
@@ -125,8 +138,9 @@
                     </div>
                     <a href="https://www.facebook.com/seidel.tom" class="link-center" target="_blank">Facebook</a>
                     <button class="link-right" data-url="https://www.facebook.com/seidel.tom" aria-label="Copy Facebook Link">
-                    <!-- 3 dots icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                        <!-- 3 dots icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                    </button>
                 </div>
 
             </div>
