@@ -75,7 +75,7 @@ copyButton.addEventListener("click", () => {
     modalLinkInput.select();
     document.execCommand("copy");
 
-    copyButton.textContent = "Copied";
+    copyButton.textContent = "Copied!";
     setTimeout(() => (copyButton.textContent = "Copy Link"), 2000);
 });
 
