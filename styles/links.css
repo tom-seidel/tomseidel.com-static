@@ -247,14 +247,14 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     max-width: 560px;
     width: 100%;
     background: #fff;
+    color: #222; /* Set default text + icon color for all children */
     border-radius: 36px;
     margin: 12px 0;
     padding: 18px;
-    position: relative;
     transition: 0.3s;
 }
 
-  .link-button:hover {
+.link-button:hover {
     background: #c9783a;
     color: #fff;
 }
@@ -268,19 +268,14 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     width: 24px;
     height: 24px;
 }
- 
-.link-left {
-    color: #222;
-}
 
 .link-right {
     background: none;
     border: none;
     padding: 0;
-    color: #222;
     cursor: pointer;
 }
-  
+
 .link-center {
     flex: 1;
     text-align: center;
@@ -288,12 +283,16 @@ body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; tra
     text-decoration: none;
 }
 
+.link-center,
+.link-right {
+    color: inherit; /* Inherit from .link-button */
+}
+
 .link-left svg,
 .link-right svg {
-    display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    display: block;
 }
 
 footer {
@@ -302,44 +301,33 @@ footer {
     font-size: 0.9rem;
     color: #bcbcbc;
 }
-  
+
 footer a {
     color: inherit;
     text-decoration: underline;
 }
 
-/* Dark mode functionality */
+/* Dark mode */
 .dark-mode {
     background: #1a1a1a;
     color: #f1f1f1;
 }
 
-.dark-mode .darkmode-button {
-    background: #444;
-    color: #fff;
-}
-
-.dark-mode .darkmode-button:hover {
-    background: #c9783a;
-}
-
+.dark-mode .darkmode-button,
 .dark-mode .menu-button {
     background: #444;
     color: #fff;
 }
 
-.dark-mode .menu-button:hover {
+.dark-mode .darkmode-button:hover,
+.dark-mode .menu-button:hover,
+.dark-mode .link-button:hover {
     background: #c9783a;
 }
 
 .dark-mode .link-button {
     background: #444;
-    color: #fff;
-}
-
-.dark-mode .link-button:hover {
-    background: #c9783a;
-    color: #fff;
+    color: #f1f1f1; /* trigger */
 }
 
 .dark-mode .overlay {
@@ -351,23 +339,15 @@ footer a {
     color: #f1f1f1;
 }
 
-.dark-mode .modal-close {
-    color: #f1f1f1;
-}
-
+.dark-mode .modal-close,
 .dark-mode .modal-close svg {
+    color: #f1f1f1;
     stroke: white !important;
 }
 
+.dark-mode .link-center,
+.dark-mode .link-right,
 .dark-mode .link-left svg {
-    color: #f1f1f1;
-}
-
-.dark-mode .link-center {
-    color: #f1f1f1;
-}
-
-.dark-mode .link-right {
     color: #f1f1f1;
 }
 
