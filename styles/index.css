@@ -1,16 +1,5 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    min-height: 100vh;
-    color: #222;
-    background: linear-gradient(to bottom, #9bbace, #5d8baa);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: background 0.2s, color 0.2s;
-}
+body { font-family: "Poppins", sans-serif; background: #7b9cb0; color: #222; transition: 0.2s; }
 
 /* Modal Window */
 .overlay {
@@ -21,7 +10,7 @@ body {
     opacity: 0;
     pointer-events: none;
     z-index: 1001;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .overlay.active {
@@ -43,7 +32,7 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
     z-index: 1002;
 }
 
@@ -124,7 +113,7 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.2s;
     margin-top: 10px;
 }
 
@@ -159,7 +148,7 @@ body {
     justify-content: space-between;
     width: 100%;
     margin: 0 1.5em;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .darkmode-share.hidden {
@@ -180,7 +169,7 @@ body {
     cursor: pointer;
     border: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s;
+    transition: background 0.2s;
 }
 
 .darkmode-button:hover {
@@ -201,7 +190,7 @@ body {
     cursor: pointer;
     border: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s;
+    transition: background 0.2s;
 }
 
 .menu-button:hover {
@@ -267,12 +256,9 @@ footer a {
 }
 
 /* Dark mode */
-body.dark-mode {
+.dark-mode {
+    background: #1a1a1a;
     color: #f1f1f1;
-    background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .dark-mode .darkmode-button,
@@ -303,7 +289,7 @@ body.dark-mode {
 }
 
 .dark-mode .hover-heart {
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
     cursor: pointer;
     color: #ff4d4d;
 }
