@@ -255,6 +255,12 @@ footer {
     color: #bcbcbc;
 }
 
+footer p {
+    max-width: 576px;
+    margin: 0 auto;
+    padding-inline: 1rem; /* optional: für mobile */
+}
+
 footer a {
     color: inherit;
     text-decoration: underline;
