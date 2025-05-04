@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Seidel</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <title>Tom Seidel</title>
+    </head>
+    <body>
+
+        <div class="overlay"></div>
+        <section id="modal-frame" class="modal-frame">
+          <header class="modal-header">
+            <h2>Share Link</h2>
+            <button id="modal-close" class="modal-close" aria-label="Close modal">
+              <!-- Close Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+          </header>
+          <div class="modal-input-wrapper">
+            <input type="text" id="modal-link" class="modal-link" value="" readonly />
+            <button id="copy-button" class="copy-button" data-url="">Copy Link</button>
+          </div>
+        </section>
+        
+        <header>
+            <div class="header-wrapper">
+                <div class="header-content">
+                    <div class="darkmode-share">
+                        <button id="darkmode-button" class="darkmode-button"></button>
+                        <button id="menu-button" class="menu-button" data-url="https://tomseidel.com/"></button>
+                    </div>
+                </div>
+                <div class="hero-wrapper">
+                    <!-- Under construction -->
+                     <h1>This page is under construction</h1>
+                     <p>Check back soon!</p>
+                     <!-- Heart svg -->
+                     <p class="heart-line">
+                        <svg class="hover-heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    </p>
+                </div>
+            </div>
+        </header>
+        
+        <footer>
+            <p>&copy; <span id="year"></span> Tom Seidel | <a href="/legalnotes.html" target="_blank">Legal Notice</a></p>
+        </footer>
+
+        <script src="scripts/links.js"></script>
+    </body>
 </html>
