@@ -1,21 +1,15 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     min-height: 100vh;
     color: #222;
-    background: linear-gradient(to bottom, #ccc, #799eb7);
+    background: linear-gradient(to bottom, #9bbace, #5d8baa);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 0.2s;
+    transition: background 0.2s, color 0.2s;
 }
 
 /* Modal Window */
@@ -267,12 +261,12 @@ footer a {
 }
 
 /* Dark mode */
-.dark-mode {
+body.dark-mode {
     color: #f1f1f1;
     background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .dark-mode .darkmode-button,
