@@ -1,5 +1,22 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: "Poppins", sans-serif; background: #799eb7; color: #222; transition: 0.3s; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    color: #222;
+    background: linear-gradient(to bottom, #ccc, #799eb7);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+}
 
 /* Modal Window */
 .overlay {
@@ -251,8 +268,11 @@ footer a {
 
 /* Dark mode */
 .dark-mode {
-    background: #1a1a1a;
     color: #f1f1f1;
+    background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .dark-mode .darkmode-button,
