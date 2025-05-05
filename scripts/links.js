@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Detect system theme preference
-    const getSystemTheme = () =>
-        window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const getSystemTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 
     // Get stored user preference, default to 'auto'
     const getStoredMode = () => localStorage.getItem("theme") || "auto";
