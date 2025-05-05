@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (mode === "auto") {
             icon = icons.auto;
         } else if (mode === "dark") {
-            icon = icons.dark;
-        } else {
             icon = icons.light;
+        } else {
+            icon = icons.dark;
         }
 
         button.innerHTML = icon;
