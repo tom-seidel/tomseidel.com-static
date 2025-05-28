@@ -117,7 +117,6 @@ const copyButton = document.getElementById("copy-button");
 function openShareModal(link) {
     modalLinkInput.value = link;
     modalLinkInput.select(); // optional: mark directly
-    copyButton.textContent = "Copy Link";
 
     overlay.classList.add("active");
     modal.classList.add("active");
