@@ -128,7 +128,7 @@ copyButton.addEventListener("click", () => {
     document.execCommand("copy");
 
     copyButton.textContent = "Copied!";
-    setTimeout(() => (copyButton.textContent = "Copy Link"), 2000);
+    setTimeout(() => (copyButton.textContent = "Copy Link"), 1500);
 });
 
 // Right-click menus in the link buttons
